@@ -1,0 +1,16 @@
+.gitattributes text
+.gitignore text
+gradlew text
+
+*.bat text eol=crlf
+*.gradle text
+*.html text
+*.java text
+*.kt text
+*.kts text
+*.properties text
+*.yaml text
+*.yml text
+
+*.jar binary
+*.png binary
