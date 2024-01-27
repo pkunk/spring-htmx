@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadLocalRandom
 class FeedController {
 
     companion object {
-        const val PAGE_SIZE = 5;
+        const val PAGE_SIZE = 5
     }
 
     val statuses by lazy {

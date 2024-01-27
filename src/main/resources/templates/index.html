@@ -2,9 +2,9 @@
 <html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
     <title>Test htmx application</title>
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/webjars/bootstrap/js/bootstrap.min.js" defer></script>
-    <script src="/webjars/htmx.org/dist/htmx.js" defer></script>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+    <script th:src="@{/webjars/htmx.org/dist/htmx.js}" defer></script>
 </head>
 <body>
 <div class="container">
