@@ -11,9 +11,9 @@
     <h1>Feed</h1>
     <div class="card" id="load-feed">
         <button
-                hx-get="/statuses?page=0"
-                hx-target="#load-feed"
+                hx-get="/feed?page=0"
                 hx-swap="outerHTML"
+                hx-target="#load-feed"
                 class="btn btn-outline-primary">Load Feed
         </button>
     </div>

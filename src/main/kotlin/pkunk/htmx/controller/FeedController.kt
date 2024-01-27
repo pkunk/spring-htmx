@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom
 
 
 @Controller
-class StatusController {
+class FeedController {
 
     companion object {
         const val PAGE_SIZE = 5;
@@ -40,20 +40,20 @@ class StatusController {
             .replace("/", "")
             .replace("=", "")
 
-    @GetMapping("/statuses")
+    @GetMapping("/feed")
     fun getStatuses(
         model: Model,
         @RequestParam("page") page: Int
     ): String {
         if (page > 99) {
             model.addAttribute("statuses", emptyList<Status>())
-            model.addAttribute("link", "/statuses?page=" + 100)
-            return "statuses"
+            model.addAttribute("link", "/feed?page=" + 100)
+            return "feed"
         }
         val from = page * PAGE_SIZE
         val to = from + PAGE_SIZE
         model.addAttribute("statuses", statuses.subList(from, to))
-        model.addAttribute("link", "/statuses?page=" + (page + 1))
-        return "statuses"
+        model.addAttribute("link", "/feed?page=" + (page + 1))
+        return "feed"
     }
 }
